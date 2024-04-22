@@ -77,6 +77,8 @@ class Transformacje:
             
 
     def plh2xyz(self, phi, lam, h):
+        phi = radians(phi)
+        lam = radians(lam)
         Rn = self.a / sqrt(1 - self.ecc2 * sin(phi)**2)
         q = Rn * self.ecc2 * sin(phi)
         x = (Rn + h) * cos(phi) * cos(lam)
